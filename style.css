@@ -1,0 +1,39 @@
+#gamefield{
+    width: 500px;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    background-color: darkolivegreen;
+    overflow: hidden;
+}
+
+.tile{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: idle;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes idle {
+    from {
+        font-size: 2rem;
+        margin-top: -5px;
+        margin-left: -5px;
+        rotate: -25deg;    
+    }
+    to {
+        font-size: 1.8rem;
+        margin-top: 5px;
+        margin-left: 5px;
+        rotate: 25deg;    
+    }
+  }
+
+.type-0,.type-9{ background-color: burlywood; }
+.type-1{ background-color: darkolivegreen; }
